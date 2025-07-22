@@ -1,0 +1,357 @@
+.battleTeamPage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+.loading, .error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  background-color: var(--bg-card);
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+}
+
+.error {
+  color: #f44336;
+}
+
+.emptyTeam {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: var(--bg-card);
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+}
+
+.emptyTeam h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.emptyTeam p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.findPokemonBtn {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.findPokemonBtn:hover {
+  background-color: var(--accent-color-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para los stats del equipo */
+.teamStats {
+  background-color: var(--bg-card);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--card-shadow);
+}
+
+.teamStats h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.statsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.statColumn, .typesColumn {
+  padding: 1rem;
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+}
+
+.statColumn h3, .typesColumn h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: var(--text-primary);
+}
+
+.statsList {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.statItem {
+  display: grid;
+  grid-template-columns: 100px 1fr 40px;
+  align-items: center;
+  gap: 1rem;
+}
+
+.statName {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.statBarContainer {
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.statBar {
+  height: 100%;
+  background-color: var(--accent-color);
+  border-radius: 4px;
+}
+
+.statValue {
+  text-align: right;
+  font-weight: bold;
+  color: var(--text-primary);
+}
+
+.typesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.typeTag {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: white;
+  background-color: #a0a0a0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.typeTag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* Estos colores son para los tipos de Pokémon */
+.normal { background-color: #A8A878; }
+.fire { background-color: #F08030; }
+.water { background-color: #6890F0; }
+.grass { background-color: #78C850; }
+.electric { background-color: #F8D030; }
+.ice { background-color: #98D8D8; }
+.fighting { background-color: #C03028; }
+.poison { background-color: #A040A0; }
+.ground { background-color: #E0C068; }
+.flying { background-color: #A890F0; }
+.psychic { background-color: #F85888; }
+.bug { background-color: #A8B820; }
+.rock { background-color: #B8A038; }
+.ghost { background-color: #705898; }
+.dark { background-color: #705848; }
+.dragon { background-color: #7038F8; }
+.steel { background-color: #B8B8D0; }
+.fairy { background-color: #EE99AC; }
+
+/* Estilos para la cuadrícula de Pokémon */
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.pokemonCard {
+  position: relative;
+  background-color: var(--bg-card);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pokemonCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.pokemonLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 1.2rem;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.pokemonImage {
+  max-width: 120px;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.pokemonCard:hover .pokemonImage {
+  transform: scale(1.1);
+}
+
+.pokemonInfo {
+  text-align: center;
+}
+
+.pokemonName {
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+  color: var(--text-primary);
+}
+
+.pokemonNumber {
+  color: var(--text-secondary);
+  margin: 0 0 0.8rem;
+}
+
+.typesContainer {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.removeButton {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.pokemonCard:hover .removeButton {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.removeButton:hover {
+  background-color: #d32f2f;
+}
+
+/* Estilos para los slots vacíos */
+.emptySlot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-secondary);
+  min-height: 250px;
+  border: 2px dashed #ccc;
+  box-shadow: none;
+}
+
+.emptySlot:hover {
+  transform: none;
+  box-shadow: none;
+  background-color: var(--bg-hover);
+}
+
+.emptySlotContent {
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.emptySlotPlus {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Media queries para diseño responsive */
+@media (max-width: 768px) {
+  .battleTeamPage {
+    padding: 1.5rem;
+  }
+  
+  .statsContainer {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .statColumn, .typesColumn {
+    padding: 1rem;
+  }
+  
+  .teamGrid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .battleTeamPage {
+    padding: 1rem;
+  }
+  
+  .teamGrid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  
+  .pokemonLink {
+    padding: 0.8rem;
+  }
+  
+  .imageContainer {
+    padding: 0.8rem;
+  }
+  
+  .pokemonImage {
+    max-width: 100px;
+  }
+  
+  .pokemonName {
+    font-size: 1.1rem;
+  }
+  
+  .typeTag {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.6rem;
+  }
+} 

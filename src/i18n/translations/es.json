@@ -1,0 +1,67 @@
+{
+  "common": {
+    "loading": "Cargando...",
+    "search": "Buscar",
+    "searchPlaceholder": "Buscar Pokémon por nombre o número",
+    "notFound": "No encontrado",
+    "back": "Volver",
+    "home": "Inicio",
+    "favorites": "Favoritos",
+    "battleTeam": "Equipo de Batalla",
+    "darkMode": "Modo Oscuro",
+    "lightMode": "Modo Claro"
+  },
+  "home": {
+    "title": "Pokémon",
+    "showMore": "Cargar Más",
+    "noResults": "No se encontró ningún Pokémon con ese nombre o número.",
+    "tryAgain": "Por favor, prueba con un término de búsqueda diferente."
+  },
+  "pokemon": {
+    "description": "Descripción",
+    "baseStats": "Estadísticas Base",
+    "type": "Tipo",
+    "height": "Altura",
+    "weight": "Peso",
+    "abilities": "Habilidades",
+    "hidden": "Oculta",
+    "moves": "Movimientos",
+    "power": "Poder",
+    "learn": "Método de aprendizaje",
+    "levelUp": "Nivel {{level}}",
+    "learnMethod": "{{method}}",
+    "noMoves": "No hay datos de movimientos disponibles.",
+    "locations": "Ubicaciones",
+    "noLocations": "No se encuentra en estado salvaje.",
+    "moreLocations": "Y {{count}} ubicaciones más...",
+    "noDescription": "No hay descripción disponible.",
+    "removeFavorite": "Quitar de Favoritos",
+    "addFavorite": "Añadir a Favoritos",
+    "addToTeam": "Añadir al Equipo",
+    "removeFromTeam": "Quitar del Equipo",
+    "addedToTeam": "¡{{name}} añadido a tu Equipo de Batalla!",
+    "removedFromTeam": "{{name}} eliminado de tu Equipo de Batalla",
+    "teamIsFull": "¡Tu Equipo de Batalla está completo! Elimina un Pokémon primero."
+  },
+  "favorites": {
+    "title": "Pokémon Favoritos",
+    "empty": "Aún no hay favoritos",
+    "addSome": "Añade algunos Pokémon a tus favoritos y aparecerán aquí."
+  },
+  "battleTeam": {
+    "title": "Tu Equipo de Batalla",
+    "emptyTeam": "Tu Equipo de Batalla está vacío",
+    "emptyTeamDescription": "Añade hasta 6 Pokémon a tu Equipo de Batalla desde tus favoritos. Primero añade Pokémon a tus favoritos, luego añádelos a tu Equipo de Batalla.",
+    "findPokemon": "Buscar Pokémon",
+    "teamStats": "Estadísticas del Equipo",
+    "averageStats": "Estadísticas Promedio",
+    "teamTypes": "Tipos del Equipo",
+    "remove": "Eliminar",
+    "emptySlot": "Espacio Vacío"
+  },
+  "notFound": {
+    "title": "Página No Encontrada",
+    "message": "La página que estás buscando no existe.",
+    "homeLink": "Volver al Inicio"
+  }
+} 

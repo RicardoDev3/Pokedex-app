@@ -1,0 +1,148 @@
+.notFoundContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  text-align: center;
+}
+
+.content {
+  max-width: 500px;
+  padding: 2rem;
+  background-color: var(--bg-card);
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+  position: relative;
+}
+
+.title {
+  font-size: 8rem;
+  margin: 0;
+  color: var(--accent-color);
+  opacity: 0.8;
+  line-height: 1;
+}
+
+.content h2 {
+  font-size: 1.8rem;
+  margin-top: 0;
+  color: var(--text-primary);
+}
+
+.content p {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.homeLink {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: all 0.3s;
+  margin-bottom: 2rem;
+}
+
+.homeLink:hover {
+  background-color: var(--accent-color-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.pokeball {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 2rem auto 1rem;
+  animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.pokeballTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #f44336;
+  border-radius: 50px 50px 0 0;
+}
+
+.pokeballBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: white;
+  border-radius: 0 0 50px 50px;
+}
+
+.pokeballMiddle {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background-color: #333;
+  transform: translateY(-50%);
+}
+
+.pokeballCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border: 5px solid #333;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 5px white;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 6rem;
+  }
+  
+  .content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .content {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 5rem;
+  }
+  
+  .content h2 {
+    font-size: 1.2rem;
+  }
+  
+  .content p {
+    font-size: 1rem;
+  }
+  
+  .pokeball {
+    width: 80px;
+    height: 80px;
+  }
+} 

@@ -1,0 +1,393 @@
+.regionPage {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--accent-color);
+  font-size: 2.5rem;
+}
+
+.searchContainer {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.search {
+  width: 100%;
+}
+
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.error {
+  background-color: #ffebee;
+  color: #d32f2f;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.instruction {
+  text-align: center;
+  margin: 3rem auto;
+  max-width: 500px;
+  color: var(--text-secondary);
+  background-color: var(--bg-card);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+}
+
+.instructionIcon {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.content {
+  margin-top: 2rem;
+}
+
+.pokemonInfo {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  background-color: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+}
+
+.pokemonImage {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.pokemonDetails {
+  flex: 1;
+}
+
+.pokemonName {
+  font-size: 2rem;
+  margin: 0 0 0.5rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pokemonId {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+}
+
+.types {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.type {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  color: white;
+  font-weight: 500;
+}
+
+/* Estilos para todos los tipos de Pokémon */
+.normal { background-color: #A8A878; }
+.fire { background-color: #F08030; }
+.water { background-color: #6890F0; }
+.grass { background-color: #78C850; }
+.electric { background-color: #F8D030; }
+.ice { background-color: #98D8D8; }
+.fighting { background-color: #C03028; }
+.poison { background-color: #A040A0; }
+.ground { background-color: #E0C068; }
+.flying { background-color: #A890F0; }
+.psychic { background-color: #F85888; }
+.bug { background-color: #A8B820; }
+.rock { background-color: #B8A038; }
+.ghost { background-color: #705898; }
+.dark { background-color: #705848; }
+.dragon { background-color: #7038F8; }
+.steel { background-color: #B8B8D0; }
+.fairy { background-color: #EE99AC; }
+
+.noLocations {
+  background-color: var(--bg-card);
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  margin: 2rem 0;
+  color: var(--text-secondary);
+  box-shadow: var(--card-shadow);
+}
+
+.regionsTabContainer {
+  margin-bottom: 2rem;
+  overflow-x: auto;
+}
+
+.regionsTab {
+  display: flex;
+  gap: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.regionButton {
+  padding: 0.8rem 1.5rem;
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: 30px;
+  color: var(--text-primary);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.regionButton.active {
+  background-color: var(--accent-color);
+  color: white;
+  border-color: var(--accent-color);
+}
+
+.regionButton:hover:not(.active) {
+  background-color: var(--bg-hover);
+}
+
+.mapContainer {
+  background-color: var(--bg-card);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--card-shadow);
+}
+
+.mapHeader {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.mapTitle {
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem;
+  color: var(--text-primary);
+}
+
+.mapDescription {
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.mapWrapper {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: var(--bg-hover);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.regionMap {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.locationMarker {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.markerDot {
+  width: 16px;
+  height: 16px;
+  background-color: var(--accent-color);
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s;
+}
+
+.locationMarker:hover .markerDot {
+  transform: scale(1.2);
+}
+
+.markerTooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--bg-card);
+  padding: 0.8rem;
+  border-radius: 8px;
+  width: 180px;
+  text-align: center;
+  box-shadow: var(--card-shadow);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 10;
+}
+
+.locationMarker:hover .markerTooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.locationName {
+  margin: 0 0 0.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+.encounterDetails {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.locationsList {
+  background-color: var(--bg-card);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: var(--card-shadow);
+}
+
+.locationsTitle {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.locationsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.locationCard {
+  background-color: var(--bg-hover);
+  border-radius: 8px;
+  padding: 1.2rem;
+  transition: transform 0.3s;
+}
+
+.locationCard:hover {
+  transform: translateY(-3px);
+}
+
+.locationCardTitle {
+  margin: 0 0 0.3rem;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  text-transform: capitalize;
+}
+
+.locationAreaName {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.locationDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.detailItem {
+  display: flex;
+  font-size: 0.9rem;
+}
+
+.detailLabel {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-right: 0.5rem;
+  min-width: 60px;
+}
+
+.detailValue {
+  color: var(--text-secondary);
+}
+
+.showMoreButton, .showLessButton {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  background-color: var(--bg-hover);
+  border: none;
+  color: var(--accent-color);
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.showMoreButton:hover, .showLessButton:hover {
+  background-color: var(--border-color);
+}
+
+@media (max-width: 992px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .mapWrapper {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pokemonInfo {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .types {
+    justify-content: center;
+  }
+  
+  .mapWrapper {
+    height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 1.8rem;
+  }
+  
+  .mapWrapper {
+    height: 250px;
+  }
+  
+  .regionButton {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .locationCard {
+    padding: 1rem;
+  }
+} 

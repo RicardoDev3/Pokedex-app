@@ -1,0 +1,60 @@
+{
+  "rules": [
+    {
+      "description": "Separa lógica de presentación en componentes",
+      "matcher": {
+        "type": "functionComponent",
+        "pattern": ".*"
+      },
+      "suggestion": "Extrae componentes reutilizables como SearchBar o PokemonCard en la carpeta /components"
+    },
+    {
+      "description": "Evita funciones anónimas dentro de JSX",
+      "matcher": {
+        "type": "jsxInlineFunction",
+        "pattern": ".*"
+      },
+      "suggestion": "Mueve funciones a una constante declarada fuera del return"
+    },
+    {
+      "description": "Usa useEffect para llamadas a APIs",
+      "matcher": {
+        "type": "apiCall",
+        "pattern": ".*"
+      },
+      "suggestion": "Asegúrate de que todas las llamadas a APIs estén dentro de un useEffect o función controlada"
+    },
+    {
+      "description": "Usa CSS Modules para estilos",
+      "matcher": {
+        "type": "importStatement",
+        "pattern": ".*\\.css"
+      },
+      "suggestion": "Renombra tus archivos de estilo a *.module.css y usa import './Component.module.css'"
+    },
+    {
+      "description": "Usa react-router-dom para navegación",
+      "matcher": {
+        "type": "importStatement",
+        "pattern": "react-router.*"
+      },
+      "suggestion": "Asegúrate de usar react-router-dom para manejar múltiples vistas"
+    },
+    {
+      "description": "Nombra los componentes de forma descriptiva y en inglés",
+      "matcher": {
+        "type": "componentName",
+        "pattern": ".*"
+      },
+      "suggestion": "Usa nombres como PokemonCard, SearchBar, o PokemonDetail"
+    },
+    {
+      "description": "Nombra variables con verbos en inglés y en camelCase",
+      "matcher": {
+        "type": "variableName",
+        "pattern": ".*"
+      },
+      "suggestion": "Usa nombres como fetchData, handleClick o getPokemonList en formato camelCase"
+    }
+  ]
+}

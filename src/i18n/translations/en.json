@@ -1,0 +1,67 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "search": "Search",
+    "searchPlaceholder": "Search Pokémon by name or number",
+    "notFound": "Not found",
+    "back": "Back",
+    "home": "Home",
+    "favorites": "Favorites",
+    "battleTeam": "Battle Team",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode"
+  },
+  "home": {
+    "title": "Pokémon",
+    "showMore": "Load More",
+    "noResults": "No Pokémon found with that name or number.",
+    "tryAgain": "Please try a different search term."
+  },
+  "pokemon": {
+    "description": "Description",
+    "baseStats": "Base Stats",
+    "type": "Type",
+    "height": "Height",
+    "weight": "Weight",
+    "abilities": "Abilities",
+    "hidden": "Hidden",
+    "moves": "Moves",
+    "power": "Power",
+    "learn": "Learn Method",
+    "levelUp": "Level {{level}}",
+    "learnMethod": "{{method}}",
+    "noMoves": "No move data available.",
+    "locations": "Locations",
+    "noLocations": "Not found in the wild.",
+    "moreLocations": "And {{count}} more locations...",
+    "noDescription": "No description available.",
+    "removeFavorite": "Remove from Favorites",
+    "addFavorite": "Add to Favorites",
+    "addToTeam": "Add to Battle Team",
+    "removeFromTeam": "Remove from Team",
+    "addedToTeam": "{{name}} added to your Battle Team!",
+    "removedFromTeam": "{{name}} removed from your Battle Team",
+    "teamIsFull": "Your Battle Team is full! Remove a Pokémon first."
+  },
+  "favorites": {
+    "title": "Favorite Pokémon",
+    "empty": "No favorites yet",
+    "addSome": "Add some Pokémon to your favorites and they will appear here."
+  },
+  "battleTeam": {
+    "title": "Your Battle Team",
+    "emptyTeam": "Your Battle Team is empty",
+    "emptyTeamDescription": "Add up to 6 Pokémon to your Battle Team from your favorites. First add Pokémon to your favorites, then add them to your Battle Team.",
+    "findPokemon": "Find Pokémon",
+    "teamStats": "Team Stats",
+    "averageStats": "Average Stats",
+    "teamTypes": "Team Types",
+    "remove": "Remove",
+    "emptySlot": "Empty Slot"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "message": "The page you're looking for doesn't exist.",
+    "homeLink": "Return to Home"
+  }
+} 

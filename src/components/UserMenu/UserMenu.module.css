@@ -1,0 +1,134 @@
+.userMenuContainer {
+  position: relative;
+  margin-left: 1rem;
+}
+
+.userButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.userAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.userButton:hover .userAvatar {
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.loginIcon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  transition: color 0.3s, transform 0.3s;
+}
+
+.userButton:hover .loginIcon {
+  color: var(--accent-color);
+  transform: scale(1.1);
+}
+
+.dropdown {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  width: 220px;
+  background-color: var(--bg-card);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  z-index: 10;
+  overflow: hidden;
+  animation: fadeInDown 0.3s ease;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.userInfo {
+  padding: 1rem;
+  text-align: center;
+}
+
+.username {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.email {
+  margin: 0.2rem 0 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.divider {
+  border: none;
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 0.5rem 0;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  text-align: left;
+  font-size: 0.95rem;
+  transition: background-color 0.3s;
+}
+
+.menuItem:hover {
+  background-color: var(--bg-hover);
+}
+
+.menuItem svg {
+  margin-right: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.menuItem:hover svg {
+  color: var(--accent-color);
+}
+
+/* Media query para dispositivos pequeños */
+@media (max-width: 576px) {
+  .dropdown {
+    width: 200px;
+  }
+} 

@@ -1,0 +1,99 @@
+:root {
+  /* Variables del tema claro (por defecto) */
+  --bg-primary: #f8f8f8;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --accent-color: #ef5350;
+  --accent-color-hover: #e53935;
+  --accent-light: #ffebee;
+  --accent-dark: #e53935;
+  --border-color: #dddddd;
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --header-bg: #ef5350;
+  --header-text: #ffffff;
+  --bg-input: #ffffff;
+  --stat-bar-bg: #f0f0f0;
+  --stat-bar-fill: #4caf50;
+}
+
+[data-theme='dark'] {
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --bg-card: #2a2a2a;
+  --text-primary: #f0f0f0;
+  --text-secondary: #cccccc;
+  --accent-color: #ff6b6b;
+  --accent-color-hover: #ff4d4d;
+  --accent-light: #402424;
+  --accent-dark: #ff4d4d;
+  --border-color: #444444;
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  --header-bg: #2c2c2c;
+  --header-text: #f0f0f0;
+  --bg-input: #333333;
+  --stat-bar-bg: #3a3a3a;
+  --stat-bar-fill: #6abf69;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Clase para transición suave entre temas */
+.theme-transition,
+.theme-transition *,
+.theme-transition *:before,
+.theme-transition *:after {
+  transition: all 0.3s ease !important;
+  transition-delay: 0 !important;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Animaciones para las tarjetas */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

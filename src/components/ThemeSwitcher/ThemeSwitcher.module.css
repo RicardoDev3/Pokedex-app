@@ -1,0 +1,103 @@
+.themeButton {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  border-radius: 15px;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  background-color: var(--bg-secondary);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.themeButton:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+.iconContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+  z-index: 1;
+}
+
+.slider {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  transition: all 0.4s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.icon {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  font-size: 16px;
+  transform: scale(0.8);
+  display: flex;
+  align-items: center;
+}
+
+.light .sunIcon, .dark .moonIcon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.light {
+  background-color: #f0c420;
+}
+
+.dark {
+  background-color: #383838;
+}
+
+.dark .slider {
+  left: calc(100% - 27px);
+  background-color: #303030;
+}
+
+/* Animation for slider */
+.themeButton:active .slider {
+  width: 28px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .themeButton:hover .slider {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 768px) {
+  .themeButton {
+    width: 50px;
+    height: 26px;
+  }
+  
+  .slider {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .dark .slider {
+    left: calc(100% - 23px);
+  }
+  
+  .icon {
+    font-size: 14px;
+  }
+} 
