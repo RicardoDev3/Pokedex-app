@@ -42,7 +42,7 @@ const PokemonSearch = ({ onSelectPokemon, className }) => {
         // Filtrar los resultados basados en el término de búsqueda
         const filteredResults = data.results
           .filter(pokemon => pokemon.name.includes(searchTerm.toLowerCase()))
-          .slice(0, 10); // Limitar a 10 resultados para mejor rendimiento
+          .slice(0, 10);
         
         // Obtener más detalles de cada Pokémon filtrado
         const detailedResults = await Promise.all(

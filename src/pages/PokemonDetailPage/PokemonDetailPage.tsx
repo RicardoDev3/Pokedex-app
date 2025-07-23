@@ -211,17 +211,6 @@ function PokemonDetailPage() {
               {favoriteStatus ? t('pokemon.removeFavorite') : t('pokemon.addFavorite')}
             </button>
             
-            <button 
-              className={`${styles.battleTeamButton} ${battleTeamStatus ? styles.inTeam : ''}`}
-              onClick={handleToggleBattleTeam}
-              disabled={!favoriteStatus && isBattleTeamFull()}
-              aria-label={battleTeamStatus ? t('pokemon.removeFromTeam') : t('pokemon.addToTeam')}
-            >
-              <span className={styles.battleTeamIcon}>
-                {battleTeamStatus ? '⚔️' : '🔰'}
-              </span>
-              {battleTeamStatus ? t('pokemon.removeFromTeam') : t('pokemon.addToTeam')}
-            </button>
           </div>
         </div>
         
@@ -352,7 +341,7 @@ function PokemonDetailPage() {
       </div>
 
       {/* Botones para navegación avanzada */}
-      <div className={styles.advancedTools}>
+      {/* <div className={styles.advancedTools}>
         <Link to={`/compare?pokemon1=${pokemon.id}`} className={styles.advancedButton}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
             <path d="M9 3L5 6.99h3V14h2V6.99h3L9 3zm7 14.01V10h-2v7.01h-3L15 21l4-3.99h-3z" />
@@ -373,7 +362,7 @@ function PokemonDetailPage() {
           </svg>
           {t('region.title')}
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 }
